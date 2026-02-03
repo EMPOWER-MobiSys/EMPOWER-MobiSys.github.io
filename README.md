@@ -1,9 +1,3 @@
----
-layout: default
-title: EMPOWER 2026
-description: Energy-efficient Machine learning for Performance-Optimized Wireless and Edge NetwoRks
----
-
 # EMPOWER 2026
 ### Energy-efficient Machine learning for Performance-Optimized Wireless and Edge NetwoRks
 
