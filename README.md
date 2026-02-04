@@ -21,7 +21,7 @@ To address the diverse challenges of the AI-Mobile ecosystem, EMPOWER 2026 welco
 #### **Track 1: AI for Networks**
 *Focusing on scalable, trustworthy intelligence to optimize non-stationary network conditions and next-generation connectivity.*
 * **Topics:**
-    * AI-native 6G architectures
+    * AI-native 6G and edge architectures
     * Trustworthy network operations and automation
     * Intelligent spectrum management
     * AI for network security and resilience
