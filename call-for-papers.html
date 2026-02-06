@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMPOWER Workshop 2026 - Call for Papers</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1f2937',
+            secondary: '#3b82f6',
+            accent: '#10b981',
+            lightgray: '#f8fafc'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .nav-link {
+        @apply px-3 py-2 rounded-full text-slate-100 hover:text-accent hover:bg-white/10 transition text-sm font-medium;
+      }
+      .active-tab {
+        @apply bg-white text-primary pointer-events-none cursor-default shadow-md;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(0,0,0,0.25) 0%,
+          rgba(0,0,0,0.55) 100%
+        );
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-lightgray text-slate-800 antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-6xl mt-4 px-4">
+        <div class="backdrop-blur-md bg-primary/90 border border-white/10 rounded-2xl shadow-lg">
+          <div class="flex items-center justify-between px-4 py-3">
+
+            <a href="index.html" class="flex items-center gap-2">
+              <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-bold text-lg shadow-md">
+                E
+              </div>
+              <div class="flex flex-col leading-tight">
+                <span class="text-white font-semibold text-lg tracking-wide">
+                  EMPOWER 2026
+                </span>
+                <span class="text-xs text-slate-200/80">
+                  Energy-Efficient ML · Edge · Wireless
+                </span>
+              </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-4">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="call-for-papers.html" class="nav-link active-tab">Call for Papers</a>
+              <a href="committees.html" class="nav-link">Committees</a>
+              <a href="submission.html" class="nav-link">Paper Submission</a>
+              <a href="venue.html" class="nav-link">Venue</a>
+            </nav>
+
+            <button id="mobileBtn" class="md:hidden text-slate-50 text-2xl">☰</button>
+          </div>
+
+          <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 px-4 pb-4 space-y-2 text-sm">
+            <a href="index.html" class="block py-1.5 nav-link">Home</a>
+            <a href="call-for-papers.html" class="block py-1.5 nav-link active-tab">Call for Papers</a>
+            <a href="committees.html" class="block py-1.5 nav-link">Committees</a>
+            <a href="submission.html" class="block py-1.5 nav-link">Paper Submission</a>
+            <a href="venue.html" class="block py-1.5 nav-link">Venue</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const mobileBtn = document.getElementById('mobileBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
+    <!-- HERO -->
+    <section
+      class="relative w-full h-[300px] bg-cover bg-center flex items-end"
+      style="background-image: url('assets/cambridge-uk.jpg');">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 w-full max-w-5xl mx-auto px-6 pb-8">
+        <h1 class="text-4xl font-bold text-white">
+          Call for Papers
+        </h1>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex-1 bg-lightgray pt-12 pb-20">
+
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <p class="text-gray-700 leading-relaxed text-justify mb-4 font-medium">
+          EMPOWER 2026 bridges the gap between the machine learning community
+          and the mobile systems community.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed text-justify mb-4">
+          Mobile and wireless networks are evolving toward highly heterogeneous
+          ecosystems, encompassing smartphones, wearables, and dense edge
+          infrastructures. Simultaneously, the integration of AI into these
+          systems has triggered an <em>AI Compute–Energy Crisis</em>, where the
+          demands of modern models often exceed the thermal and energy limits
+          of constrained hardware.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed text-justify">
+          We explore the full lifecycle of mobile intelligence. We solicit
+          contributions that span the spectrum from algorithmic innovations
+          to real-world system deployments, organized into two distinct tracks.
+        </p>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-6">
+          Workshop Tracks
+        </h2>
+
+        <p class="text-gray-700 mb-6">
+          To address the diverse challenges of the AI–Mobile ecosystem,
+          EMPOWER 2026 welcomes submissions under two main tracks:
+        </p>
+
+        <!-- TRACK 1 -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-semibold text-primary mb-3">
+            Track 1: AI for Networks
+          </h3>
+          <p class="text-gray-700 mb-4 text-justify">
+            Focusing on scalable, trustworthy intelligence to optimize
+            non-stationary network conditions and next-generation connectivity.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 marker:text-accent">
+            <li>AI-native 6G and edge architectures</li>
+            <li>Trustworthy network operations and automation</li>
+            <li>Intelligent spectrum management</li>
+            <li>AI for network security and resilience</li>
+          </ul>
+        </div>
+
+        <!-- TRACK 2 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-primary mb-3">
+            Track 2: Systems for AI
+          </h3>
+          <p class="text-gray-700 mb-4 text-justify">
+            Focusing on lightweight architectures, brain-inspired computing,
+            and intelligent AI workload scheduling to make intelligence
+            viable on the edge.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 marker:text-accent">
+            <li>On-device Generative AI (GenAI)</li>
+            <li>Model compression and quantization</li>
+            <li>Brain-inspired computing and neuromorphic systems</li>
+            <li>Energy-efficient AI workload scheduling</li>
+            <li>Thermal-aware mobile computing</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-slate-200 text-sm py-8 border-t border-white/10">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        &copy; 2026 EMPOWER Workshop. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

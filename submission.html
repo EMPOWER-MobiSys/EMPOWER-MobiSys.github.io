@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMPOWER Workshop 2026 - Paper Submission</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1f2937',
+            secondary: '#3b82f6',
+            accent: '#10b981',
+            lightgray: '#f8fafc'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .nav-link {
+        @apply px-3 py-2 rounded-full text-slate-100 hover:text-accent hover:bg-white/10 transition text-sm font-medium;
+      }
+      .active-tab {
+        @apply bg-white text-primary pointer-events-none cursor-default shadow-md;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(0,0,0,0.25) 0%,
+          rgba(0,0,0,0.55) 100%
+        );
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-lightgray text-slate-800 antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-6xl mt-4 px-4">
+        <div class="backdrop-blur-md bg-primary/90 border border-white/10 rounded-2xl shadow-lg">
+          <div class="flex items-center justify-between px-4 py-3">
+
+            <a href="index.html" class="flex items-center gap-2">
+              <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-bold text-lg shadow-md">
+                E
+              </div>
+              <div class="flex flex-col leading-tight">
+                <span class="text-white font-semibold text-lg tracking-wide">
+                  EMPOWER 2026
+                </span>
+                <span class="text-xs text-slate-200/80">
+                  Energy-Efficient ML · Edge · Wireless
+                </span>
+              </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-4">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="call-for-papers.html" class="nav-link">Call for Papers</a>
+              <a href="committees.html" class="nav-link">Committees</a>
+              <a href="submission.html" class="nav-link active-tab">Paper Submission</a>
+              <a href="venue.html" class="nav-link">Venue</a>
+            </nav>
+
+            <button id="mobileBtn" class="md:hidden text-slate-50 text-2xl">☰</button>
+          </div>
+
+          <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 px-4 pb-4 space-y-2 text-sm">
+            <a href="index.html" class="block py-1.5 nav-link">Home</a>
+            <a href="call-for-papers.html" class="block py-1.5 nav-link">Call for Papers</a>
+            <a href="committees.html" class="block py-1.5 nav-link">Committees</a>
+            <a href="submission.html" class="block py-1.5 nav-link active-tab">Paper Submission</a>
+            <a href="venue.html" class="block py-1.5 nav-link">Venue</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const mobileBtn = document.getElementById('mobileBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
+    <!-- HERO -->
+    <section
+      class="relative w-full h-[300px] bg-cover bg-center flex items-end"
+      style="background-image: url('assets/cambridge-uk.jpg');">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 w-full max-w-5xl mx-auto px-6 pb-8">
+        <h1 class="text-4xl font-bold text-white">
+          Paper Submission
+        </h1>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex-1 bg-lightgray pt-12 pb-20">
+
+      <!-- GUIDELINES -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">
+          Submission Guidelines
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed text-justify">
+          We invite original research papers that have not been previously published
+          and are not currently under review for publication.
+        </p>
+      </section>
+
+      <!-- PAGE LIMITS -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h3 class="text-2xl font-semibold text-primary mb-3">
+          Page Limits
+        </h3>
+
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 marker:text-accent">
+          <li><strong>Full Papers:</strong> Up to 6 pages (including references).</li>
+          <li><strong>Position Papers:</strong> Up to 4 pages (including references).</li>
+        </ul>
+      </section>
+
+      <!-- FORMATTING -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h3 class="text-2xl font-semibold text-primary mb-3">
+          Formatting Requirements
+        </h3>
+
+        <p class="text-gray-700 mb-4">
+          All submissions must be provided in PDF format and follow the
+          formatting guidelines of MobiSys 2026:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 marker:text-accent">
+          <li>Font: 10pt font (or larger)</li>
+          <li>Paper Size: Letter-sized (8.5” × 11”)</li>
+          <li>Layout: Double-column</li>
+          <li>Column width: 9.25” × 3.33”</li>
+          <li>Space between columns: 0.33”</li>
+          <li>Spacing: Single-spaced</li>
+          <li>Abstract: Fewer than 250 words</li>
+        </ul>
+      </section>
+
+      <!-- LATEX TEMPLATE -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h3 class="text-2xl font-semibold text-primary mb-3">
+          LaTeX Template
+        </h3>
+
+        <p class="text-gray-700 leading-relaxed text-justify">
+          Submissions can use the
+          <a
+            href="https://www.acm.org/publications/proceedings-template"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary font-medium underline hover:text-accent"
+          >
+            ACM Proceedings LaTeX Template
+          </a>.
+          Authors remain responsible for checking that their resulting PDF
+          meets the formatting specifications above.
+        </p>
+      </section>
+
+      <!-- REVIEW PROCESS -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h3 class="text-2xl font-semibold text-primary mb-3">
+          Review Process
+        </h3>
+
+        <p class="text-gray-700 mb-3">
+          EMPOWER 2026 follows a <strong>double-blind review process</strong>.
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 marker:text-accent">
+          <li>
+            <strong>Anonymization:</strong> Authors must not reveal their identity.
+            Please remove names, affiliations, and contact information from the PDF.
+          </li>
+          <li>
+            <strong>Citations:</strong> Cite your own work in the third person
+            (e.g., “Smith et al. showed…” rather than “We showed…”).
+          </li>
+        </ul>
+      </section>
+
+      <!-- SUBMISSION SITE -->
+      <section class="max-w-5xl mx-auto px-6">
+        <h3 class="text-2xl font-semibold text-primary mb-3">
+          Submission Site
+        </h3>
+
+        <p class="text-gray-700">
+          The submission link will be available soon.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-slate-200 text-sm py-8 border-t border-white/10">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        &copy; 2026 EMPOWER Workshop. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

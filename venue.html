@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMPOWER Workshop 2026 - Venue</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1f2937',
+            secondary: '#3b82f6',
+            accent: '#10b981',
+            lightgray: '#f8fafc'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .nav-link {
+        @apply px-3 py-2 rounded-full text-slate-100 hover:text-accent hover:bg-white/10 transition text-sm font-medium;
+      }
+      .active-tab {
+        @apply bg-white text-primary pointer-events-none cursor-default shadow-md;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(0,0,0,0.25) 0%,
+          rgba(0,0,0,0.55) 100%
+        );
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-lightgray text-slate-800 antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-6xl mt-4 px-4">
+        <div class="backdrop-blur-md bg-primary/90 border border-white/10 rounded-2xl shadow-lg">
+          <div class="flex items-center justify-between px-4 py-3">
+
+            <a href="index.html" class="flex items-center gap-2">
+              <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-bold text-lg shadow-md">
+                E
+              </div>
+              <div class="flex flex-col leading-tight">
+                <span class="text-white font-semibold text-lg tracking-wide">
+                  EMPOWER 2026
+                </span>
+                <span class="text-xs text-slate-200/80">
+                  Energy-Efficient ML · Edge · Wireless
+                </span>
+              </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-4">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="call-for-papers.html" class="nav-link">Call for Papers</a>
+              <a href="committees.html" class="nav-link">Committees</a>
+              <a href="submission.html" class="nav-link">Paper Submission</a>
+              <a href="venue.html" class="nav-link active-tab">Venue</a>
+            </nav>
+
+            <button id="mobileBtn" class="md:hidden text-slate-50 text-2xl">☰</button>
+          </div>
+
+          <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 px-4 pb-4 space-y-2 text-sm">
+            <a href="index.html" class="block py-1.5 nav-link">Home</a>
+            <a href="call-for-papers.html" class="block py-1.5 nav-link">Call for Papers</a>
+            <a href="committees.html" class="block py-1.5 nav-link">Committees</a>
+            <a href="submission.html" class="block py-1.5 nav-link">Paper Submission</a>
+            <a href="venue.html" class="block py-1.5 nav-link active-tab">Venue</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const mobileBtn = document.getElementById('mobileBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
+    <!-- HERO -->
+    <section
+      class="relative w-full h-[300px] bg-cover bg-center flex items-end"
+      style="background-image: url('assets/cambridge-uk.jpg');">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 w-full max-w-5xl mx-auto px-6 pb-8">
+        <h1 class="text-4xl font-bold text-white">
+          Venue
+        </h1>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex-1 bg-lightgray pt-12 pb-20">
+
+      <!-- VENUE -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">
+          Workshop Venue
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed text-justify mb-3">
+          EMPOWER 2026 will be held in conjunction with <strong>ACM MobiSys 2026</strong>
+          in Cambridge, United Kingdom.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed text-justify">
+          Cambridge is a global hub for computer systems, networking, and artificial
+          intelligence research, offering a vibrant academic environment and a rich
+          history of innovation.
+        </p>
+      </section>
+
+      <!-- REGISTRATION -->
+      <section class="max-w-5xl mx-auto px-6 mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-4">
+          Registration
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed text-justify">
+          Registration for the workshop will be handled through the main
+          <strong>MobiSys 2026</strong> website.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-4">
+          Contact
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed text-justify mb-2">
+          If you have any questions regarding the workshop or the submission process,
+          please reach out to the workshop chairs at:
+        </p>
+
+        <p class="text-gray-700 font-medium">
+          📧
+          <a
+            href="mailto:mmendula@cttc.es"
+            class="text-secondary underline hover:text-accent"
+          >
+            mmendula@cttc.es
+          </a>
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-slate-200 text-sm py-8 border-t border-white/10">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        &copy; 2026 EMPOWER Workshop. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
